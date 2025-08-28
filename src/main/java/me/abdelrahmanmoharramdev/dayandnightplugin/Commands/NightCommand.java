@@ -1,6 +1,6 @@
 package me.abdelrahmanmoharramdev.dayandnightplugin.Commands;
 
-import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,12 +17,12 @@ public class NightCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!player.hasPermission("dayandnightplugin.night")) {
-            player.sendMessage("§cYou don’t have permission!");
+            player.sendMessage(ChatColor.RED +"You don’t have permission!");
             return true;
         }
 
         player.getWorld().setTime(13000);
-        Bukkit.broadcastMessage("§e night time has been set by " + player.getName() + "!");
+        player.sendMessage(ChatColor.GREEN + "NightTime has been set by " + player.getName() + "!");
         return true;
     }
 }

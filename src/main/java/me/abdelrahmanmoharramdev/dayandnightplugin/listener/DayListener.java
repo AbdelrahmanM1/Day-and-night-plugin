@@ -1,5 +1,6 @@
 package me.abdelrahmanmoharramdev.dayandnightplugin.listener;
 
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
@@ -16,7 +17,7 @@ public class DayListener implements Listener {
 
         // If player tries /day but it's already day
         if (message.startsWith("/day") && time >= 0 && time < 12000) {
-            player.sendMessage("§cIt’s already daytime!");
+            player.sendMessage(ChatColor.RED + "It’s already day time!");
             event.setCancelled(true); // cancel the command
         }
     }
