@@ -20,13 +20,13 @@ public final class Dayandnightplugin extends JavaPlugin {
         getCommand("day").setExecutor(new DayCommand());
         getCommand("night").setExecutor(new NightCommand());
 
-        getLogger().info("The Plugin Enabled made by 3bdoabk");
+        getLogger().info("Day and night plugin Enabled made by 3bdoabk");
 
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("The Plugin disabled made by 3bdoabk");
+        getLogger().info("Day and night plugin  disabled made by 3bdoabk");
     }
 }
